@@ -1,7 +1,55 @@
+/* Class Attributes */
 .center {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.accent {
+    color: #266150;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+.backgroundNav {
+    background-color: #FDF8F5;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.background {
+    background-color: #E8CEBF;
+}
+
+/* Element Attributes */
+nav {
+    background-color: #FDF8F5;
+    overflow: auto;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: bold;
+}
+nav a {
+    float: left;
+    padding: 12px;
+    color: #266150;
+    text-decoration: none;
+    font-size: 20px;
+    width: 31%;
+    text-align: center;
+}
+
+nav a:hover {
+    color: #E8CEBF;
+}
+
+nav a:visited {
+    color: #4F4846;
 }
 
 img {
@@ -14,4 +62,61 @@ img {
 th, td {
     padding: 8px; 
     border: 1px solid
+}
+
+li {
+    list-style-type: square;
+}
+
+li::marker {
+    color: #266150;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #266150;
+    font-style: oblique;
+    text-shadow: 2px 2px #DDAF94;
+}
+
+footer {
+    font-weight: bold;
+    color: #4F4846;
+    font-style: oblique;
+    text-shadow: 1px 1px #DDAF94;
+}
+
+/* ID Attributes */
+#table {
+    width: 100%;
+    background-color: #ffac81;
+    background-image: linear-gradient(315deg, #ffac81 0%, #ff928b 74%);
+}
+
+#shadow {
+    border:2px solid #fff;
+    background: url(img/tiger.png) no-repeat;
+    box-shadow: 10px 10px 5px #DDAF94;
+}
+
+#transform {
+    transform: skewX(4deg);
+}
+
+#roundBorder {
+    border-radius: 30px;
+}
+
+#bounce {
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
 }
