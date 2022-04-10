@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../css/index.css">
         <link rel="stylesheet" href="../css/form.css">
         <title>Contact Us</title>
+        <script defer src="../javascript/formValidation.js"></script>
     </head>
 
     <body class="background">
@@ -23,9 +24,10 @@
 
         <!--This section contains a form that customers can fill out for inquiries.-->
         <div class="center">
-            <form action="/">
+            <form action="/" id="contactForm">
                 <div class="form-inner">
                     <h2>Fill out this form to get in touch with us!</h2>
+                    <div id="error"></div>
                     <input type="text" id="fname" placeholder="First Name">
                     <input type="text" id="lname" placeholder="Last Name">
                     <input type="text" id="address" placeholder="Address">
@@ -91,13 +93,13 @@
                     <input type="email" placeholder="Email Address">
 
                     <div class="accountType">
-                        <input type="radio" value="none" id="personal" name="account" checked/>
+                        <input type="radio" value="none" id="accountType" name="account" checked/>
                         <label for="personal" class="radio">Personal</label>
-                        <input type="radio" value="none" id="business" name="account" />
+                        <input type="radio" value="none" id="accountType" name="account" />
                         <label for="business" class="radio">Company</label>
                     </div>
 
-                    <button type="submit" href="/">Submit</button>
+                    <button type="submit">Submit</button>
                 </div>
             </form>
         </div><br><br>
