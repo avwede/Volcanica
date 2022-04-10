@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+input, textarea { 
+    outline: none;
+}
+
+form {
+    position: relative;
+    border-radius: 30px;
+    background: #fff;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.form-inner {
+    padding: 40px;
+}
+
+.form-inner input, .form-inner textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #d0dfe8;
+}
+
+.form-inner textarea {
+    resize: none;
+}
+
+.form-inner select {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #d0dfe8;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    border-bottom: 4px solid #3e4f24;
+    background: #5a7233; 
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+button:hover {
+    background: #3e4f24;
+} 
+
+
+.accountType {
+    margin: 15px 0;
+}
+input[type=radio] {
+    display: none;
+}
+
+label.radio {
+    position: relative;
+    display: inline-block;
+    padding-top: 4px;
+    margin-right: 20px;
+    text-indent: 30px;
+    overflow: visible;
+    cursor: pointer;
+}
+
+label.radio:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1c87c9;
+}
+
+label.radio:after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 4px;
+    top: 8px;
+    left: 4px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+
+input[type=radio]:checked + label:after {
+    opacity: 1;
+}

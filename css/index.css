@@ -23,6 +23,8 @@
 
 .background {
     background-color: #E8CEBF;
+    padding: 0;
+    margin: 0;
 }
 
 /* Element Attributes */
@@ -33,14 +35,16 @@ nav {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: oblique;
     font-weight: bold;
+
 }
 nav a {
     float: left;
-    padding: 12px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: #266150;
     text-decoration: none;
     font-size: 20px;
-    width: 31%;
+    width: 25%;
     text-align: center;
 }
 
@@ -85,6 +89,7 @@ footer {
     font-style: oblique;
     text-shadow: 1px 1px #DDAF94;
 }
+
 
 /* ID Attributes */
 #table {
