@@ -1,15 +1,15 @@
 function validate(event) {
 
-    // let allfields = document.getElementById("inputfield");
-    let fname = document.getElementById("fname").value.trim();
-    let lname = document.getElementById("lname").value.trim();
-    let address = document.getElementById("address").value.trim();
-    let city = document.getElementById("city").value.trim();
-    // let state = document.getElementById("state").value.trim();
-    let zipcode = document.getElementById("zipcode").value.trim();
-    let phone = document.getElementById("phone").value.trim();
-    let email = document.getElementById("email").value.trim();
-    // let accountType = document.getElementById("personal").value.trim();
+    // let allfields = document.querySelector("inputfield");
+    let fname = document.querySelector("#fname").value.trim();
+    let lname = document.querySelector("#lname").value.trim();
+    let address = document.querySelector("#address").value.trim();
+    let city = document.querySelector("#city").value.trim();
+    // let state = document.querySelector("state").value.trim();
+    let zipcode = document.querySelector("#zipcode").value.trim();
+    let phone = document.querySelector("#phone").value.trim();
+    let email = document.querySelector("#email").value.trim();
+    // let accountType = document.querySelector("personal").value.trim();
     
     let formValid = true;    
 
@@ -81,6 +81,6 @@ const validateEmail = (inputEmail) => {
     );
 };
 
-let form = document.getElementById("contactForm");
+let form = document.querySelector("#contactForm");
 form.addEventListener("submit", validate);
 
