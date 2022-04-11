@@ -26,14 +26,12 @@
             <form id="contactForm">
                 <div class="form-inner">
                     <h2>Fill out this form to get in touch with us!</h2>
-                    <div id="error"></div>
                     <input type="text" id="fname" placeholder="First Name">
                     <input type="text" id="lname" placeholder="Last Name">
                     <input type="text" id="address" placeholder="Address">
                     <input type="text" id="city" placeholder="City">
                     
-                    <select type="text" id="state" placeholder="City">
-                        <option value="">State</option>
+                    <select type="text" id="state">
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -87,15 +85,15 @@
                         <option value="WY">Wyoming</option>
                     </select>
 
-                    <input type="text" id="zipcode" placeholder="Zip Code">
-                    <input type="text" id="phone" placeholder="Phone Number">
-                    <input type="email" placeholder="Email Address">
+                    <input type="number" id="zipcode" placeholder="Zip Code">
+                    <input type="number" id="phone" placeholder="Phone Number">
+                    <input type="email" id="email" placeholder="Email Address">
 
                     <div class="accountType">
-                        <input type="radio" value="none" id="accountType" name="account" checked/>
+                        <input type="radio" value="personal" id="personal" name="account" checked/>
                         <label for="personal" class="radio">Personal</label>
-                        <input type="radio" value="none" id="accountType" name="account" />
-                        <label for="business" class="radio">Company</label>
+                        <input type="radio" value="business" id="business" name="account" />
+                        <label for="business" class="radio">Business</label>
                     </div>
 
                     <button type="submit">Submit</button>

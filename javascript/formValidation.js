@@ -1,75 +1,76 @@
 function validate(event) {
 
-    // let allfields = document.querySelector("inputfield");
+    let form = document.querySelector("#contactForm");
     let fname = document.querySelector("#fname").value.trim();
     let lname = document.querySelector("#lname").value.trim();
     let address = document.querySelector("#address").value.trim();
     let city = document.querySelector("#city").value.trim();
-    // let state = document.querySelector("state").value.trim();
     let zipcode = document.querySelector("#zipcode").value.trim();
     let phone = document.querySelector("#phone").value.trim();
     let email = document.querySelector("#email").value.trim();
-    // let accountType = document.querySelector("personal").value.trim();
     
     let formValid = true;    
 
-    // make sure first name length > 1
+    // Validate the text input elements contain data longer than one character.
     if (fname.length < 1) {
-        form.fname.style.backgroundColor = "tomato";
+        form.fname.style.backgroundColor = "#FF6961";
         formValid = false;
+        window.alert("Please enter a valid input for first name.");
         event.preventDefault();
     }
-    else form.fname.style.backgroundColor = "chartreuse";
+    else form.fname.style.backgroundColor = "#CAE7C1";
 
-    // make sure last name length > 1
     if (lname.length < 1) {
-        form.lname.style.backgroundColor = "tomato";
+        form.lname.style.backgroundColor = "#FF6961";
         formValid = false;
+        window.alert("Please enter a valid input for last name.");
         event.preventDefault();
     }
-    else form.lname.style.backgroundColor = "chartreuse";
+    else form.lname.style.backgroundColor = "#CAE7C1";
     
-    // make sure address length > 1
     if (address.length < 1) {
-        form.address.style.backgroundColor = "tomato";
+        form.address.style.backgroundColor = "#FF6961";
         formValid = false;
+        window.alert("Please enter a valid input for address.");
         event.preventDefault();
     }
-    else form.address.style.backgroundColor = "chartreuse";
+    else form.address.style.backgroundColor = "#CAE7C1";
 
-    // make sure city length > 1
     if (city.length < 1) {
-        form.city.style.backgroundColor = "tomato";
+        form.city.style.backgroundColor = "#FF6961";
         formValid = false;
+        window.alert("Please enter a valid input for city.");
         event.preventDefault();
     }
-    else form.city.style.backgroundColor = "chartreuse";
+    else form.city.style.backgroundColor = "#CAE7C1";
 
-    // make sure zipcode length is == 5 and are all numbers
+    // Validate the zip code is numeric and is five digits long.
     if (!(zipcode.length == 5 && !isNaN(zipcode))) {
-        form.zipcode.style.backgroundColor = "tomato";
+        form.zipcode.style.backgroundColor = "#FF6961";
         formValid = false;
+        window.alert("Please enter a valid input for zipcode.");
         event.preventDefault();
     }
-    else form.zipcode.style.backgroundColor = "chartreuse";
+    else form.zipcode.style.backgroundColor = "#CAE7C1";
 
-    // make sure phone number length is == 10 and are all numbers
+    // Validate the phone number is numeric and is 10 digits long.
     if (!(phone.length == 10 && !isNaN(phone))) {
-        form.phone.style.backgroundColor = "tomato";
+        form.phone.style.backgroundColor = "#FF6961";
         formValid = false;
+        window.alert("Please enter a valid input for phone.");
         event.preventDefault();
     }   
-    else form.phone.style.backgroundColor = "chartreuse";
+    else form.phone.style.backgroundColor = "#CAE7C1";
 
-    // make sure email length is > 1 and passes the regular expression shown in validateEmail() function
+    // Validate the email address
     if (email.length < 1 || !validateEmail(email)) {
-        form.email.style.backgroundColor = "tomato";
+        form.email.style.backgroundColor = "#FF6961";
         formValid = false;
+        window.alert("Please enter a valid input for email.");
         event.preventDefault();
     }
-    else form.email.style.backgroundColor = "chartreuse";
+    else form.email.style.backgroundColor = "#CAE7C1";
 
-    // if the entire form is valid, submit and let the user know
     if (formValid) {
         window.alert("Form has been submitted. Thank You!");
     }
@@ -83,4 +84,3 @@ const validateEmail = (inputEmail) => {
 
 let form = document.querySelector("#contactForm");
 form.addEventListener("submit", validate);
-
